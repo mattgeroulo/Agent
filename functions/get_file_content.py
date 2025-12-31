@@ -25,6 +25,7 @@ def get_file_content(working_directory,file_path):
         
                 if f.read(1):
                     file_content_string += f'[...File "{file_path}" truncated at {MAX_CHARS} characters]'
+            print(f"   - get_file_content.py :target file {target_file}")
             return file_content_string
         except (OSError,UnicodeError) as e:
             return f"Error: reading file path: {file_path}: {e}"

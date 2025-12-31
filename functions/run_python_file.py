@@ -35,6 +35,7 @@ def run_python_file(working_directory,file_path,args=None):
             output+=f"STDERR: {process.stderr}"
         if not process.stdout and not process.stderr:
              output+= f"No output produced"
+        print(f"  -  run_python_file.py . Target file: {target_file}")
         return output
     except Exception as e:
         return f"Error: {e}"

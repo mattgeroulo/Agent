@@ -20,6 +20,7 @@ def get_files_info(working_directory,directory="."):
         for data in dir_contents:
             path = os.path.normpath(os.path.join(target_dir,data))
             output_string+=f'- {data}: file_size={os.path.getsize(path)} bytes, is_dir={os.path.isdir(path)} \n'
+        print(f"   - get_files_info.py :target dir {target_dir}")
         return output_string
     except:
        return f'Error: get_files_info function call'

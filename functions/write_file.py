@@ -28,6 +28,7 @@ def write_file(working_directory,file_path,content):
     try:
         with open(target_file,"w") as f:
             f.write(content)
+        print(f"   - Write_file.py :target file {target_file}")
         return f'Successfully wrote to "{target_file}" ({len(content)} characters written)'
             
             
